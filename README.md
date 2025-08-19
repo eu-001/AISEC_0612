@@ -13,7 +13,6 @@ lotto_AI : 학습된 모델의 사용자 서비스 구현을 위한 백앤드 �
 
 ◎ 개발툴  
 pycharm - flask middle server launch and model and user UI integrate
-//
 jupyter - local remote share learnning
 colab - development tools for working with graphics processing
 
