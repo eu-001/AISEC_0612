@@ -91,12 +91,12 @@
       }
 
       .material-symbols-outlined:hover {
-        color: red;
+        color: rgb(132, 0, 255);
         cursor: pointer;
       }
 
       a {
-        color: blue;
+        color: rgb(104, 80, 119);
         text-decoration: none;
       }
     </style>
@@ -245,14 +245,14 @@
         font-size: 2vw;
         padding: 0.5vw 0;
         text-align: center;
-        background: orange;
+        background: rgb(191, 175, 212);
         color: white;
       "
     >
-      인공지능 솔루션 적대적공격 보안을 위한 학습 [홍길동]
+      인공지능 솔루션 적대적공격 보안을 위한 학습 [양유진]
     </h2>
     <p style="text-align: right; margin-right: 3vw; margin-bottom: 0.1vw">
-      <a href="https://github.com/dmsgur/AISEC_0612">
+      <a href="https://github.com/eu-001/AISEC_0612">
         view git source repository
       </a>
     </p>
@@ -260,16 +260,21 @@
     <hr style="margin: 0.7vw 1vw; clear: both" />
     <footer style="text-align: center">
       helper : 광주컴퓨터기술학원 포트폴리오 서식<br />
-      <span style="color: blue">author : 광주컴퓨터기술학원 062-413-1600</span>
+      <span style="color: rgb(104, 80, 119)"
+        >author : 광주컴퓨터기술학원 062-413-1600</span
+      >
       <span style="color: darkgray"> since : 2024-10-01 ~ </span>
     </footer>
     <div id="cover"></div>
-    <div id="display" style="border: 3px solid orange; border-style: inset">
+    <div
+      id="display"
+      style="border: 3px solid rgb(191, 175, 212); border-style: inset"
+    >
       <h2 id="sub_title" style="text-align: center; margin: 0.2vh 0"></h2>
       <hr style="margin: 1vw 5%; border: 2px solid gray; margin-bottom: 1vh" />
       <p
         id="sub_content"
-        style="height: 2.6vh; color: blue; margin: 0.3vw 0"
+        style="height: 2.6vh; color: rgb(104, 80, 119); margin: 0.3vw 0"
       ></p>
       <div
         id="sub_img"
@@ -392,7 +397,7 @@
 
     #img_closer:hover {
       background: white;
-      color: orangered;
+      color: rgb(106, 170, 93);
       opacity: 0.7;
     }
   </style>
@@ -401,7 +406,7 @@
       thumbnail_id = thumbnail_id
         .replace(`https://drive.google.com/file/d/`, "")
         .replace("/view?usp=drive_link", "");
-      return `<div class="imgcontainer" style="text-align:center;background:MintCream;${
+      return `<div class="imgcontainer" style="text-align:center;background:rgb(235, 245, 239);${
         float_chk ? "clear:both;" : "float:left;"
       }${width ? "width:" + (float_chk ? 100 : width) + "%;" : "width:100%;"} ${
         height ? "height:" + height + "vh" : "height:100%"
@@ -466,7 +471,7 @@
           top: "2vw",
         })
         .prepend(
-          `<p class='urlcont' style="text-align:right;margin-bottom:2rem;margin-left:2rem"><a style="color:orange" href="${
+          `<p class='urlcont' style="text-align:right;margin-bottom:2rem;margin-left:2rem"><a style="color:rgb(104, 80, 119)" href="${
             curcontainer.attr("sourceurl") ? curcontainer.attr("sourceurl") : ""
           }">${curcontainer.attr("sourceurl") ? "소스보기" : ""}</a><br></p>`
         )
