@@ -16,6 +16,7 @@
         margin: 0;
         padding: 0;
       }
+
       #container {
         height: 80vh;
         width: 99vw;
@@ -42,9 +43,11 @@
         text-align: center;
         font-size: 1.2vw;
       }
+
       #maincontainer {
         padding: 0 1vw;
       }
+
       .content {
         margin: 0.2vw;
         /* 컨텐츠 크기지정 */
@@ -242,14 +245,14 @@
         font-size: 2vw;
         padding: 0.5vw 0;
         text-align: center;
-        background: black;
+        background: orange;
         color: white;
       "
     >
-      스프링 WAS 활용한 로그인 시스템[홍길동]
+      인공지능 솔루션 적대적공격 보안을 위한 학습 [홍길동]
     </h2>
     <p style="text-align: right; margin-right: 3vw; margin-bottom: 0.1vw">
-      <a href="https://github.com/eu-001/AISEC_0612/tree/main">
+      <a href="https://github.com/dmsgur/AISEC_0612">
         view git source repository
       </a>
     </p>
@@ -268,7 +271,10 @@
         id="sub_content"
         style="height: 2.6vh; color: blue; margin: 0.3vw 0"
       ></p>
-      <div id="sub_img" style="overflow: hidden; height: 35vh"></div>
+      <div
+        id="sub_img"
+        style="overflow-y: auto; height: 65vh; text-align: center"
+      ></div>
       <p
         id="user_fill"
         style="height: 3vh; position: absolute; bottom: 6vh"
@@ -352,8 +358,8 @@
       display: none;
       z-index: 100;
       padding: 1vh;
-      width: 90vw;
-      height: 79vh;
+      width: 97vw;
+      height: 85vh;
       top: 6vh;
       left: 1vw;
       position: absolute;
@@ -361,24 +367,29 @@
       border-radius: 1vw;
       padding: 0.3vw 0.5vw;
     }
+
     .elips_cont {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
       word-break: break-all;
     }
+
     #user_fill {
       color: blueviolet;
     }
+
     .detail_cont {
       width: calc(100vw / 6);
       height: 10vw;
     }
+
     #img_closer {
       background: lightgray;
       color: white;
       opacity: 0.195;
     }
+
     #img_closer:hover {
       background: white;
       color: orangered;
@@ -390,7 +401,7 @@
       thumbnail_id = thumbnail_id
         .replace(`https://drive.google.com/file/d/`, "")
         .replace("/view?usp=drive_link", "");
-      return `<div class="imgcontainer" style="text-align:center;background:lightgray;${
+      return `<div class="imgcontainer" style="text-align:center;background:MintCream;${
         float_chk ? "clear:both;" : "float:left;"
       }${width ? "width:" + (float_chk ? 100 : width) + "%;" : "width:100%;"} ${
         height ? "height:" + height + "vh" : "height:100%"
@@ -450,7 +461,7 @@
           zIndex: 111,
           position: "absolute",
           maxWidth: "92%",
-          height: "78vh",
+          height: "82vh",
           left: "1vw",
           top: "2vw",
         })
@@ -460,7 +471,7 @@
           }">${curcontainer.attr("sourceurl") ? "소스보기" : ""}</a><br></p>`
         )
         .append(
-          `<p class="logcont" style="background:white;padding:0.5vw;border:1px solid gray">${curcontainer
+          `<p class="logcont" style="background:white;padding:0.5vw;border:1px solid gray;position:absolute;bottom:0.3vw;width:95%;left:1.8vw">${curcontainer
             .find(".elips_cont")
             .text()}</p>`
         );

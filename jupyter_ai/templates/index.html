@@ -76,14 +76,14 @@
         border: 1px solid orange;
       "
     >
-      저자:홍길동<br />
+      저자:양유진<br />
       교육:광주컴퓨터기술학원<br />
       기간:25.6.12 ~ 25.9.4<br />
       자기소개: AI 와 인공지능의 해킹 방어 연구를 위한 포트폴리오<br />
     </div>
     <div style="width: 90%; margin: auto">
       <img
-        src="{{url_for('static',filename='lotto_img.webp')}}"
+        src="lotto_img.webp"
         style="margin: 0.2rem; width: 12.8rem; position: absolute; top: 3.3rem"
       />
       <div id="main" style="font-size: 1.5rem">
@@ -94,9 +94,7 @@
         <label style="display: block; width: 40rem"
           >모델 :
           <select id="msel" style="font-size: 1.5rem; width: 30rem">
-            <option value="LSTM_model_12" selected>
-              LSTM 모델 (타임스텝 12주)
-            </option>
+            <option value="LSTM_model_12">LSTM 모델 (타임스텝 12주)</option>
             <option value="LSTM_model_48">LSTM 모델 (타임스텝 48주)</option>
             <option value="CONV_model_12">ConvLSTM 모델 (타임스텝 12주)</option>
             <option value="CONV_model_48">ConvLSTM 모델 (타임스텝 48주)</option>
@@ -111,15 +109,9 @@
       </div>
       <div id="container">
         <h3>이번주 로또 예측 번호</h3>
-        <p>모델훈련일자 : <span id="lastfit_date"></span></p>
-        <p>추 &nbsp;첨 &nbsp;일 &nbsp;자 : <span id="pred_date"></span></p>
-        <p>전 체 오 차 율 : <span id="all_err"></span></p>
+        <p>추첨일 : <span></span></p>
         <div style="color: blue; font-size: 1.5rem">
-          <p>
-            예측 RNN 딥러닝 모델 [
-            <span id="mdname" style="color: red; font-weight: bold">LSTM</span>
-            ]
-          </p>
+          <p>예측 RNN 딥러닝 모델 LSTM</p>
           <p>과거부터 현재까의 모든 로또 번호와 추첨일을 조합한 예측번호</p>
         </div>
         <div style="margin: 2rem">
@@ -130,20 +122,41 @@
           <div class="nt">예측번호 5</div>
           <div class="nt">예측번호 6</div>
           <div class="nt">보너스번호</div>
-          <div style="clear: both" class="ls" id="num1">1</div>
-          <div class="ls" id="num2">2</div>
-          <div class="ls" id="num3">3</div>
-          <div class="ls" id="num4">4</div>
-          <div class="ls" id="num5">5</div>
-          <div class="ls" id="num6">6</div>
-          <div class="ls" id="num7">7</div>
-          <div class="nt" id="num1_err">에러 1</div>
-          <div class="nt" id="num2_err">에러 2</div>
-          <div class="nt" id="num3_err">에러 3</div>
-          <div class="nt" id="num4_err">에러 4</div>
-          <div class="nt" id="num5_err">에러 5</div>
-          <div class="nt" id="num6_err">에러 6</div>
-          <div class="nt" id="num7_err">에러 7</div>
+          <div style="clear: both" class="ls">1</div>
+          <div class="ls">2</div>
+          <div class="ls">3</div>
+          <div class="ls">4</div>
+          <div class="ls">5</div>
+          <div class="ls">6</div>
+          <div class="ls">7</div>
+        </div>
+
+        <div
+          style="
+            clear: both;
+            margin-top: 20rem;
+            color: olivedrab;
+            font-size: 1.5rem;
+          "
+        >
+          <p>예측 RNN 딥러닝 모델 LSTMConv1D</p>
+          <p>과거부터 현재까의 모든 로또 번호와 추첨일을 조합한 예측번호</p>
+        </div>
+        <div style="margin-left: 2rem; margin-top: 2rem">
+          <div class="nt">예측번호 1</div>
+          <div class="nt">예측번호 2</div>
+          <div class="nt">예측번호 3</div>
+          <div class="nt">예측번호 4</div>
+          <div class="nt">예측번호 5</div>
+          <div class="nt">예측번호 6</div>
+          <div class="nt">보너스번호</div>
+          <div style="clear: both" class="ls">1</div>
+          <div class="ls">2</div>
+          <div class="ls">3</div>
+          <div class="ls">4</div>
+          <div class="ls">5</div>
+          <div class="ls">6</div>
+          <div class="ls">7</div>
         </div>
       </div>
       <hr style="margin-top: 19rem; border-width: 1px" />
@@ -167,28 +180,12 @@
         detailinfo.style.display = "none";
       });
       launch_model.addEventListener("click", async function () {
-        const cover = document.getElementById("cover");
-        cover.style.display = "black";
-        let mdate = document.getElementById("mdate").value;
-        if (!mdate) {
-          alert("날짜를 선택하세요");
-          return;
+        let conn = await fetch(`/lotto365/${
+          document.getElementById("mdate").value
         }
-        let conn = await fetch(`/lotto365/${mdate}
-                                  /${document.getElementById("msel").value}`);
+                                /${document.getElementById("msel").value}`);
         let result = await conn.json();
-        main.style.display = "none";
-        container.style.display = "block";
-        const err_rat = result.err_rat; //에러율 all_err  num1_err,num2_err
-        const lastfit_date = result.lastfit_date; //마지막훈련일 lastfit_date
-        const pred = result.pred; //예측번호 7개 num2 num3 ...7
-        const pred_date = result.pred_date; //예측일자 pred_date
-        document.getElementById("all_err").innerText = `${err_rat.at(-1)}`;
-        for (let i = 0; i < 7; i++) {
-          document.getElementById(`num${i + 1}`).innerText = pred[i];
-          document.getElementById(`num${i + 1}_err`).innerText = err_rat[i];
-        }
-        cover.style.display = "none";
+        console.log(JSON.stringify(result));
       });
     </script>
   </body>
