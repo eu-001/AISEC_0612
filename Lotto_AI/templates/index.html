@@ -9,28 +9,25 @@
         margin: 0.5rem 0;
         padding: 0;
       }
-
       body {
         padding: 2rem;
+        font-family: "D2coding", monospace;
         min-width: 50rem;
       }
-
       h1 {
         text-align: center;
         color: blueviolet;
         margin: 1rem auto;
-        background: lightgray;
+        background-color: floralwhite;
         padding: 2rem 0;
         width: 90%;
       }
-
       h2 {
         margin: 1rem 0;
         text-align: right;
         margin-right: 5rem;
         color: darkgray;
       }
-
       hr {
         border-width: 0.2rem;
         box-shadow: 2px 2px 2px gray;
@@ -38,7 +35,8 @@
         margin: auto;
       }
 
-      .nt {
+      .nt,
+      ls {
         font-size: 1.2rem;
         width: 8rem;
         float: left;
@@ -50,7 +48,7 @@
         width: 8rem;
         height: 8rem;
         border-radius: 50%;
-        background: black;
+        background: blueviolet;
         color: white;
         float: left;
         margin: 0.5rem;
@@ -60,26 +58,31 @@
       }
     </style>
   </head>
-
   <body>
+    <p style="text-align: right; margin-right: 5rem">
+      <a href="https://dmsgur.github.io/AISEC_0612/" target="blank"
+        >포트폴리오 페이지 이동</a
+      >
+    </p>
     <h1>Predict Lotto Number</h1>
     <hr />
-    <h2 id="myinfo">author : dmsgur@gmail.com</h2>
+    <h2 id="myinfo">author : chcolatei71@gmail.com</h2>
     <div
       id="detailinfo"
       style="
         position: absolute;
         display: none;
-        padding: 0.5rem;
+        padding: 1rem;
         right: 5rem;
-        width: 30rem;
+        width: 25rem;
         height: 9rem;
-        background: BlueViolet;
-        color: whitesmoke;
-        border: 1px solid orange;
+        background: floralwhite;
+        color: blueviolet;
+        font-weight: 600;
+        border: 1px solid #b9aecf;
       "
     >
-      저자:홍길동<br />
+      저자:양유진<br />
       교육:광주컴퓨터기술학원<br />
       기간:25.6.12 ~ 25.9.4<br />
       자기소개: AI 와 인공지능의 해킹 방어 연구를 위한 포트폴리오<br />
@@ -131,7 +134,7 @@
       style="
         width: 100vw;
         height: 100vh;
-        background: yellow;
+        background: gray;
         opacity: 0.2;
         display: none;
         position: fixed;
@@ -153,54 +156,52 @@
     />
     <script>
       const colormap = [
-        "gold",
-        "gold",
-        "gold",
-        "gold",
-        "gold",
-        "gold",
-        "gold",
-        "gold",
-        "gold",
-        "gold",
-        "blue",
-        "blue",
-        "blue",
-        "blue",
-        "blue",
-        "blue",
-        "blue",
-        "blue",
-        "blue",
-        "blue",
-        "red",
-        "red",
-        "red",
-        "red",
-        "red",
-        "red",
-        "red",
-        "red",
-        "red",
-        "red",
-        "gray",
-        "gray",
-        "gray",
-        "gray",
-        "gray",
-        "gray",
-        "gray",
-        "gray",
-        "gray",
-        "gray",
-        "darkgreen",
-        "darkgreen",
-        "darkgreen",
-        "darkgreen",
-        "darkgreen",
-        "darkgreen",
+        "#fbc400",
+        "#fbc400",
+        "#fbc400",
+        "#fbc400",
+        "#fbc400",
+        "#fbc400",
+        "#fbc400",
+        "#fbc400",
+        "#fbc400",
+        "#fbc400",
+        "#69c8f2",
+        "#69c8f2",
+        "#69c8f2",
+        "#69c8f2",
+        "#69c8f2",
+        "#69c8f2",
+        "#69c8f2",
+        "#69c8f2",
+        "#69c8f2",
+        "#69c8f2",
+        "#ff7272",
+        "#ff7272",
+        "#ff7272",
+        "#ff7272",
+        "#ff7272",
+        "#ff7272",
+        "#ff7272",
+        "#ff7272",
+        "#ff7272",
+        "#ff7272",
+        "#aaaaaa",
+        "#aaaaaa",
+        "#aaaaaa",
+        "#aaaaaa",
+        "#aaaaaa",
+        "#aaaaaa",
+        "#aaaaaa",
+        "#aaaaaa",
+        "#aaaaaa",
+        "#aaaaaa",
+        "#b0d840",
+        "#b0d840",
+        "#b0d840",
+        "#b0d840",
+        "#b0d840",
       ];
-      console.log(colormap.length);
       let container = document.getElementById("container");
       let main = document.getElementById("main");
       let myinfo = document.getElementById("myinfo");
@@ -231,16 +232,16 @@
                                 /${document.getElementById("msel").value}`);
         let result = await conn.json();
         let inHtml = `
-            <div style="clear:both;border-top:2px solid green">
+                <div style="clear:both;border-top:2px solid green">
             <h3>이번주 로또 예측 번호</h3>
-            <p>모델훈련일자 : <span>${new Date(
-              result.lastfit_date
-            ).toLocaleDateString("ko-KR", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-              weekday: "long",
-            })}</span></p>
+             <p>모델훈련일자 : <span>${new Date(
+               result.lastfit_date
+             ).toLocaleDateString("ko-KR", {
+               year: "numeric",
+               month: "long",
+               day: "numeric",
+               weekday: "long",
+             })}</span></p>
             <p>추 &nbsp;첨 &nbsp;일 &nbsp;자 : <span>${new Date(
               result.pred_date
             ).toLocaleDateString("ko-KR", {
@@ -249,7 +250,7 @@
               day: "numeric",
               weekday: "long",
             })}</span></p>
-            <p>전 체 오 차 율 : <span>${result.err_rat.at(-1)}</span></p>
+             <p>전 체 오 차 율 : <span>${result.err_rat.at(-1)}</span></p>
             <div style="color:blue;font-size:1.5rem">
                 <p>예측 RNN 딥러닝 모델 [
                     <span style="color:red;font-weight:bold;">${
@@ -271,9 +272,9 @@
         const pred = result.pred; //예측번호 7개 num2 num3 ...7
         for (let i = 0; i < 7; i++) {
           inHtml += `
-                <div style="box-shadow:2px 2px 2px gray;background:${
-                  colormap[pred[i] + 1]
-                };${i == 0 ? "clear:both" : ""}" class="ls">${pred[i]}</div>
+                <div style="background:${colormap[pred[i] * 1 + 1]};${
+            i == 0 ? "clear:both" : ""
+          }" class="ls">${pred[i]}</div>
                 `;
         }
         for (let i = 0; i < 7; i++) {

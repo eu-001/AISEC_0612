@@ -68,8 +68,179 @@ d1.set_img(0, {
   sourceurl:
     "https://github.com/eu-001/AISEC_0612/blob/main/jupyter_ai/lotto_rnn.ipynb",
 });
+d1.set_img(0, {
+  imgtitle: "6.데이터분석및통계",
+  imgurl:
+    "https://drive.google.com/file/d/18MbVli8vtC2s0EvnMShViToTBeytFtfx/view?usp=drive_link",
+  imglog:
+    "데이터 박스플롯과 히스토그램으로 데이터 분포및 이상치 데이터 시각화 확인 후 통계출력",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/jupyter_ai/lotto_rnn.ipynb",
+});
+d1.set_img(0, {
+  imgtitle: "7.밀집데이터복원함수",
+  imgurl:
+    "https://drive.google.com/file/d/1yh2XvVNX778OMm6EwmfsWq4Oga24Mt_d/view?usp=drive_link",
+  imglog:
+    "스케일링된 정답데이터를 원래의 스케일링으로 복원 모듈 생성 및 테스트",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/jupyter_ai/lotto_rnn.ipynb",
+});
+d1.set_content("1.2 회귀예측 모델 구성"); //서브 타이틀
+d1.set_img(1, {
+  imgtitle: "8.시계열데이터생성",
+  imgurl:
+    "https://drive.google.com/file/d/1wwXc1r6QjvYJ-PBA3WMIByBqKqiFob2I/view?usp=drive_link",
+  imglog: "타임스텝에 따른 시계열 훈련 데이터 생성",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/jupyter_ai/lotto_rnn.ipynb",
+});
+d1.set_img(1, {
+  imgtitle: "9.LSTM 및 ConvLSTM1D 순차모델 구성",
+  imgurl:
+    "https://drive.google.com/file/d/1ub0R66BWT4yxdr69ghsHWyhxGnq8Kjpf/view?usp=drive_link",
+  imglog: "환경설정에 따른 LSTM 또는 ConvLSTM1D 모델을 구축 및 컴파일",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/jupyter_ai/lotto_rnn.ipynb",
+});
+d1.set_img(1, {
+  imgtitle: "10.조기종료/출력콜백함수 훈련실행",
+  imgurl:
+    "https://drive.google.com/file/d/1g5v3-fRxJ543zTh4cHh_OZ6gbsuKJNdE/view?usp=drive_link",
+  imglog:
+    "최적값 수렴후 훈련 조기종료와 훈련과정 verbose 콜백함수 등록후 훈련 실시",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/jupyter_ai/lotto_rnn.ipynb",
+});
+d1.set_img(1, {
+  imgtitle: "11.훈련결과 시각화",
+  imgurl:
+    "https://drive.google.com/file/d/1SeBPXhDEA_WH60Gl5ZIKKCog3A6gI5AE/view?usp=drive_link",
+  imglog: "MSE , MAE LOSS 시각화 그래프",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/jupyter_ai/lotto_rnn.ipynb",
+});
+d1.set_img(1, {
+  imgtitle: "12.모델 오차율 산정",
+  imgurl:
+    "https://drive.google.com/file/d/1duh3JAdyeLE27Jzg4mAaZp0WNrgQ3-7X/view?usp=drive_link",
+  imglog: "모델의 평균 오차율과 필드별 오차율 산정",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/jupyter_ai/lotto_rnn.ipynb",
+});
+d1.set_img(1, {
+  imgtitle: "13.모델저장 및 실제예측값출력",
+  imgurl:
+    "https://drive.google.com/file/d/1qmj3-Eza3SswcHtYC1lgqCx45BovpqIy/view?usp=drive_link",
+  imglog: "다음 회차 번호 예측",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/jupyter_ai/lotto_rnn.ipynb",
+});
+//d1.set_img(0, { imgtitle: "", imgurl: "", imglog: "", sourceurl: "" })
+d1.set_content("1.3 코드 리팩토링"); //서브 타이틀
+d1.set_img(2, {
+  imgtitle: "14.코드리팩토링",
+  imgurl:
+    "https://drive.google.com/file/d/1mSRxbLNJraWxHdnynhu1crAOwPW84d1S/view?usp=drive_link",
+  imglog:
+    "저장된모델불러오기,데이터전처리,스케일링복원,예측출력,모델업그레이드(미구현),오차율출력,번호예측실행시점모듈",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/Lotto_AI/service_model.py",
+});
+d1.set_img(2, {
+  imgtitle: "15.프로젝트 디렉토리구성",
+  imgurl:
+    "https://drive.google.com/file/d/1T-BTKpUbKPoz0I4BSEbCih2MBBtcFQ0q/view?usp=drive_link",
+  imglog: "모델디렉터리 및 서비스페이지 분리",
+  sourceurl: "https://github.com/eu-001/AISEC_0612/tree/main/Lotto_AI",
+});
+d1.set_content("1.4 플라스크 미들웨어 구현"); //서브 타이틀
+d1.set_img(3, {
+  imgtitle: "16.인덱스페이지 라우팅",
+  imgurl:
+    "https://drive.google.com/file/d/1daTdfTWZ8j4Eb23MV0KDdUw2F2SdJ4Lm/view?usp=drive_link",
+  imglog: "템플릿츠 디렉터리의 최초 인덱스 페이지  출력 주소 라우팅",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/Lotto_AI/WebFlask.py",
+});
+d1.set_img(3, {
+  imgtitle: "17.모델 예측 페이지 라우팅",
+  imgurl:
+    "https://drive.google.com/file/d/1SiKWa6xsRSV-Kld811B69scBgIeryIzl/view?usp=drive_link",
+  imglog:
+    "예측날짜, 모델명 파라미터 수신 후 모델의 예측값 형식에 따른 JSON 데이터로 송출",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/Lotto_AI/WebFlask.py",
+});
+d1.set_img(3, {
+  imgtitle: "18.플라스크 미들웨어 가동",
+  imgurl:
+    "https://drive.google.com/file/d/13Depxp2_Rv128z5wIWPQq-_Z3ylgxnpV/view?usp=drive_link",
+  imglog: "플라스크 미들웨어 서버 가동 화면 스냅샷(웹서버 연동 미구현)",
+  sourceurl: "",
+});
+d1.set_content("1.5 사용자 UI 구현"); //서브 타이틀
+d1.set_img(4, {
+  imgtitle: "19.사용자 인덱스 페이지 액세스",
+  imgurl:
+    "https://drive.google.com/file/d/1AQ4Oi38B0Py5GRXJXBHrtwQzvYFQ9lNf/view?usp=drive_link",
+  imglog:
+    "이용자가 접근할 최초 인덱스 페이지 스냅샷(예측 날짜 및 모델 선택 가능)",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/Lotto_AI/templates/index.html",
+});
+d1.set_img(4, {
+  imgtitle: "20.모델별 타입스텝별 예측서비스 선택",
+  imgurl:
+    "https://drive.google.com/file/d/1rqqHRiqPxRsTU8H3Pq7EkzQigR94RIxK/view?usp=drive_link",
+  imglog: "원하는 날짜와 지정된 모델별 타임스텝별 서비스 항목 선택",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/Lotto_AI/templates/index.html",
+});
+d1.set_img(4, {
+  imgtitle: "21.예측 진행중 스냅샷",
+  imgurl:
+    "https://drive.google.com/file/d/1PyzZYyfnB-59oTC8-rlFupqosRXPU_5M/view?usp=drive_link",
+  imglog:
+    "이용자 서비스 요구시 미들웨어로 부터 예측값 출력 수신 로딩 화면 스냅샷",
+  sourceurl:
+    "https://github.com/eu-001/AISEC_0612/blob/main/Lotto_AI/templates/index.html",
+});
+d1.set_content("1.6 로또 예측 서비스 구동"); //서브 타이틀
+d1.set_img(5, {
+  imgtitle: "22.예측 결과 스냅샷",
+  imgurl:
+    "https://drive.google.com/file/d/1wylMIBu7Jwvgyo__Xv8xER-Wgt2ZF5_k/view?usp=drive_link",
+  imglog: "각 번호별 예측 번호 추출과 오차확률 출력",
+  sourceurl: "",
+});
+d1.set_img(5, {
+  imgtitle: "23.모델별 다중예측 진행중 스냅샷",
+  imgurl:
+    "https://drive.google.com/file/d/1MrEMGtf5WQvE6Yn1H2TIEfC5gAE2mbnc/view?usp=drive_link",
+  imglog:
+    "기존 예측과 다른 모델의 예측 결과 비교를 위한 다중모델예측 진행 스냅샷",
+  sourceurl: "",
+});
+d1.set_img(5, {
+  imgtitle: "24.모델별 다중예측 결과 스냅샷",
+  imgurl:
+    "https://drive.google.com/file/d/1enTbXAtzQdVt_tur1WoUgQ8sG3fCkPx_/view?usp=drive_link",
+  imglog:
+    "원하는 모델 선택 후 예측결과를 모델별로 비교 분석할 수 있는 다중모델 예측 결과 스냅샷",
+  sourceurl: "",
+});
+d1.set_img(5, {
+  imgtitle: "25.원하는 모델을 선택하여 여러 예측값 출력",
+  imgurl:
+    "https://drive.google.com/file/d/1eMlD5HLja8n3vx33t_mGOrUh1LFEBUKe/view?usp=drive_link",
+  imglog:
+    "원하는 모델 선택 후 여러 모델의 예측값을 조합하여 번호를 선택할 수 있는 결과 스냅샷 ",
+  sourceurl: "",
+});
+
 d1.set_fill(
-  "서버의 보안성과 각 수행기능별 패턴을 분리하기 위해 Spring WAS 와 사용자 View 기능을 위해 웹브라우져에서 일반적인 작동이 가능한 HTML5 를 구현하며 데이터베이스 연동 대신 파일로 회원목록 저장"
+  "로또 추첨일의 날짜로 당첨번호를 스케일링 한 후 두가지 유형의 모델로 예측값과 오차를 출력, 차후 각 번호의 자리별 다중분류(softmax) 형태의 예측값 출력 개선 예정 "
 ); //사용자 에필로그
 data_sets.push(d1);
 
